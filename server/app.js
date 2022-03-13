@@ -26,11 +26,6 @@ app.use('/api/v1/', apiRoutes);
 app.use(viewsRoutes);
 app.use(staticRoutes);
 
-// Stop the user to reach the protected routes "ONLY FOR PROTECTED ROUTES"
-app.get('/client/html/signUp.html', (request, response) => {
-  response.sendFile(join(__dirname, '..', 'client', 'html', 'signUp.html'));
-});
-
 app.use(pageNotFound);
 app.use(serverError);
 
