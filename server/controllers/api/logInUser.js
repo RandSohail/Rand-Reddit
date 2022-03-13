@@ -1,10 +1,10 @@
-/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 const { compare } = require('bcryptjs');
 const { logInSchema, CustomizedError, signAsync } = require('../../utils');
 const { checkUserNameQuery } = require('../../database/queries');
 
 const logInUser = (request, response, next) => {
+  console.log(request.body);
   let userId;
   const { username, password } = request.body;
   logInSchema.validateAsync({ username, password })
@@ -22,11 +22,8 @@ const logInUser = (request, response, next) => {
     })
     .catch((error) => {
       if (error.details) {
-        console.log('validation error next');
         next(CustomizedError(error.details[0].message, 400));
       }
-      console.log(error.status);
-      console.log('error', error);
       next(error);
     });
 };
