@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const { hash } = require('bcryptjs');
 const { signUpSchema, CustomizedError, signAsync } = require('../../utils');
 const { addUserQuery, checkEmailQuery } = require('../../database/queries');
@@ -17,7 +16,7 @@ const addUser = (request, response, next) => {
     }).then((hashedPassword) => addUserQuery(username, email, hashedPassword, profileImage))
     .then(({ rows }) => signAsync({ id: rows[0].id }))
     .then((result) => {
-      response.status(200).cookie('signUpToken', result).json({ message: 'Sign Up successfully' });
+      response.status(200).cookie('Token', result).json({ message: 'Sign Up successfully' });
     })
     .catch((error) => {
       if (error.details) {
@@ -28,4 +27,4 @@ const addUser = (request, response, next) => {
     });
 };
 
-module.exports = addUser;
+module.exports = { addUser };

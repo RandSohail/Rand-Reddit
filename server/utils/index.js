@@ -1,5 +1,7 @@
-const { signUpSchema } = require('./validation');
+const { signUpSchema, logInSchema } = require('./validation');
 const { CustomizedError } = require('./customizedError');
 const { signAsync } = require('./jsonwebtokenAsync');
 
-module.exports = { signUpSchema, CustomizedError, signAsync };
+module.exports = {
+  signUpSchema, CustomizedError, signAsync, logInSchema,
+};
