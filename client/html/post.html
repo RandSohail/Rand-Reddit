@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/signUp.logIn.css">
-  <title>Log In</title>
+  <title>Create Post</title>
 </head>
 <body>
   <div class="header">
@@ -19,17 +19,17 @@
       </select>
     </div>
     <div class="right-header">
-      <a href="/logIn" class="options btn">Log In</a>
-      <a href="/signUp" class="options btn"> Sign Up </a>
+      <a href="/" class="options btn">Home</a>
+      <a href="/signUp" class="options btn"> User Name </a>
     </div>
   </div>
   <div class="form-container">
     <form class="sign-up-form">
-      <input type="text" name="username" id="username" placeholder="User Name" class="user-input"/>
+      <input type="text" name="title" id="title" placeholder="Title" class="user-input"/>
       <br />
-      <input type="password" name="password" id="password" placeholder="Password" class="user-input"/>
+      <textarea name="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
       <br>
-      <button type="submit" id="submitButton" class="user-input">Log In</button>
+      <button type="submit" id="submitButton" class="user-input">Send Post</button>
   </form>
 </div>
   <script src="../js/logIn.js"></script>

@@ -1,7 +1,8 @@
 const { signUpSchema, logInSchema } = require('./validation');
 const { CustomizedError } = require('./customizedError');
-const { signAsync } = require('./jsonwebtokenAsync');
+const { signAsync, verifyAsync } = require('./jsonwebtokenAsync');
+const { checkAuthentication } = require('./middleware');
 
 module.exports = {
-  signUpSchema, CustomizedError, signAsync, logInSchema,
+  signUpSchema, CustomizedError, signAsync, logInSchema, checkAuthentication, verifyAsync,
 };

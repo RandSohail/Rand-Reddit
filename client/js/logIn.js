@@ -4,8 +4,17 @@ const submitButton = document.querySelector('#submitButton');
 const userNameInput = document.querySelector('#username');
 const passwordInput = document.querySelector('#password');
 
+console.log(document.cookie);
+
+// fetch('/logIn', {
+//   method: 'get',
+//   headers: { 'Content-Type': 'application/json' },
+// })
+//   .then((response) => response.json())
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
+
 submitButton.addEventListener('click', (e) => {
-  console.log(userNameInput.value);
   e.preventDefault();
   fetch('/api/v1/logInUser', {
     method: 'post',
