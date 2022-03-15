@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/signUp.logIn.css">
-  <title>Create Post</title>
-</head>
-<body>
-  <div class="header">
-    <div class="left-header">
-      <a href="/" class="website-name">R-Reddit</a>
-      <select class="options">
-        <option value="home">Home</option>
-        <option value="1">/r/option1</option>
-        <option value="2">/r/option2</option>
-        <option value="3">/r/option3 lllllllllllllll</option>
-      </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/signUp.logIn.css" />
+    <title>Create Post</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-header">
+        <a href="/" class="website-name">R-Reddit</a>
+        <select class="options">
+          <option value="home">Home</option>
+          <option value="1">/r/option1</option>
+          <option value="2">/r/option2</option>
+          <option value="3">/r/option3 lllllllllllllll</option>
+        </select>
+      </div>
+      <div class="right-header">
+        <a href="/" class="options btn">Home</a>
+        <a href="/signUp" class="options btn"> User Name </a>
+      </div>
     </div>
-    <div class="right-header">
-      <a href="/" class="options btn">Home</a>
-      <a href="/signUp" class="options btn"> User Name </a>
+    <div class="form-container">
+      <form class="sign-up-form">
+        <input type="text" name="title" placeholder="Title" class="user-input title" required />
+        <br />
+        <textarea
+          name="content"
+          id="content"
+          class="content"
+          cols="30"
+          rows="10"
+          placeholder="Content"
+          required
+        ></textarea>
+        <br />
+        <input type="submit" id="submitButton" class="user-input" value="Send Post" />
+      </form>
+      <div class="feedback"></div>
     </div>
-  </div>
-  <div class="form-container">
-    <form class="sign-up-form">
-      <input type="text" name="title" id="title" placeholder="Title" class="user-input"/>
-      <br />
-      <textarea name="content" id="content" cols="30" rows="10" placeholder="Content"></textarea>
-      <br>
-      <button type="submit" id="submitButton" class="user-input">Send Post</button>
-  </form>
-</div>
-  <script src="../js/logIn.js"></script>
-</body>
+    <script src="../js/post.js"></script>
+  </body>
 </html>
