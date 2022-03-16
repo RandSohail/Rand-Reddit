@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 // const  = require('./api');
-const { signUp, logIn, postPage } = require('./view');
+const {
+  signUp, logIn, postPage, profilePage,
+} = require('./view');
 const {
   addUser, logInUser, addPost, getAllPostsData, getUserInformation, logOut, deletePost,
 } = require('./api');
@@ -19,4 +21,5 @@ module.exports = {
   getUserInformation,
   logOut,
   deletePost,
+  profilePage,
 };

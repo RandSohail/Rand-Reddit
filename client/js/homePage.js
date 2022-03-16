@@ -1,4 +1,4 @@
-/* eslint-disable prefer-template */
+/* eslint-disable max-len */
 /* eslint-disable no-undef */
 
 // get all posts
@@ -9,6 +9,6 @@ fetch('/api/v1/getAllPosts', {
   .then((data) => {
     console.log(data);
     data.forEach((element) => {
-      renderPostData(element.username, element.title, element.content, element.id, element.user_id);
+      renderPostData(element.username, element.title, element.content, element.id, element.user_id, element.username);
     });
   });
