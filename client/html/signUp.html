@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/signUp.logIn.css">
+    <link rel="icon" href="./assets/reddit.png">
+    <link rel="stylesheet" href="../css/signUp.logIn.css" />
     <title>Sign Up</title>
   </head>
   <body>
     <div class="header">
       <div class="left-header">
-        <a href="/" class="website-name">R-Reddit</a>
+        <a href="/" class="website-name details">R-Reddit</a>
         <select class="options">
           <option value="home">Home</option>
           <option value="1">/r/option1</option>
           <option value="2">/r/option2</option>
-          <option value="3">/r/option3 lllllllllllllll</option>
+          <option value="3">/r/option3</option>
         </select>
       </div>
       <div class="right-header">
@@ -25,16 +26,38 @@
     </div>
     <div class="form-container">
       <form class="sign-up-form">
-        <input type="text" name="username" id="username" placeholder="User Name" class="user-input"/>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="User Name"
+          class="user-input"
+          required
+        />
         <br />
-        <input type="email" name="email" id="email" placeholder="Email" class="user-input"/>
+        <input type="email" name="email" id="email" placeholder="Email" class="user-input" required/>
         <br />
-        <input type="password" name="password" id="password" placeholder="Password" class="user-input"/>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="user-input"
+          required
+        />
         <br />
-        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" class="user-input"/>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirm your password"
+          class="user-input"
+          required
+        />
         <br />
         <button type="submit" id="submitButton" class="user-input">Sign Up</button>
       </form>
+      <div class="feedback"></div>
     </div>
 
     <div id="data"></div>

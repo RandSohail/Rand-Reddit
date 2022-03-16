@@ -12,8 +12,6 @@ const checkAuthentication = (request, response, next) => {
       })
       .catch((error) => {
         next(CustomizedError(' Un Authorized Please log In or Sign Up ', 401));
-        // eslint-disable-next-line max-len
-        // response.clearCookie('Token').status(401).json({ message: 'Un Authorized Please log in or sign up' });
       });
   } else { next(); }
 };

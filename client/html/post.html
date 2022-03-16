@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/reddit.png">
     <link rel="stylesheet" href="../css/signUp.logIn.css" />
     <title>Create Post</title>
   </head>
   <body>
     <div class="header">
       <div class="left-header">
-        <a href="/" class="website-name">R-Reddit</a>
+        <a href="/" class="website-name details">R-Reddit</a>
         <select class="options">
           <option value="home">Home</option>
           <option value="1">/r/option1</option>
@@ -19,8 +20,16 @@
         </select>
       </div>
       <div class="right-header">
-        <a href="/" class="options btn">Home</a>
-        <a href="/signUp" class="options btn"> User Name </a>
+        <a href="/logIn" class="options btn logInButton">Log In</a>
+        <a href="signUp" class="options btn signUpButton"> Sign Up </a>
+        <a href="/" class="options btn createPost"> Home </a>
+        <div class="dropdown">
+          <button class="options btn" id="username"></button>
+          <div class="dropdown-content">
+            <a href="/profile">profile</a>
+            <a href="/logOut">log Out</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="form-container">
@@ -41,6 +50,7 @@
       </form>
       <div class="feedback"></div>
     </div>
+    <script src="../js/index.js"></script>
     <script src="../js/post.js"></script>
   </body>
 </html>

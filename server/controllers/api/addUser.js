@@ -4,16 +4,16 @@ const { addUserQuery, checkEmailQuery } = require('../../database/queries');
 
 const addUser = (request, response, next) => {
   const {
-    username, email, password, profileImage,
+    username, email, password,
   } = request.body;
   signUpSchema.validateAsync({ username, email, password })
     .then(() => checkEmailQuery(email))
     .then(({ rowCount }) => {
       if (rowCount === 1) {
-        throw new Error(CustomizedError('Email is used Try Another one', 400));
+        throw CustomizedError('Email is used Try Another one', 400);
       }
       return hash(password, 10);
-    }).then((hashedPassword) => addUserQuery(username, email, hashedPassword, profileImage))
+    }).then((hashedPassword) => addUserQuery(username, email, hashedPassword))
     .then(({ rows }) => signAsync({ id: rows[0].id }))
     .then((result) => {
       response.status(200).cookie('Token', result).json({ message: 'Sign Up successfully' });

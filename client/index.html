@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="./assets/reddit.png" />
     <link rel="stylesheet" href="./css/signUp.logIn.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <title>Reddit</title>
@@ -11,22 +16,49 @@
   <body>
     <div class="header">
       <div class="left-header">
-        <a href="/" class="website-name">R-Reddit</a>
+        <a href="/" class="website-name details">R-Reddit</a>
         <select class="options">
           <option value="home">Home</option>
           <option value="1">/r/option1</option>
           <option value="2">/r/option2</option>
-          <option value="3">/r/option3 lllllllllllllll</option>
+          <option value="3">/r/option3</option>
         </select>
       </div>
       <div class="right-header">
         <a href="/logIn" class="options btn logInButton">Log In</a>
         <a href="signUp" class="options btn signUpButton"> Sign Up </a>
+        <a href="/post" class="options btn hide-element createPost"> Create Post </a>
+        <div class="dropdown hide-element">
+          <button class="options btn" id="username"></button>
+          <div class="dropdown-content">
+            <a href="/profile">profile</a>
+            <a href="/logOut">log Out</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container">
-      <div class="card">fffffffffffffff</div>
+      <!-- <div class="card">
+        <div class="vote">
+          <i class="fa fa-angle-up" style="font-size: 25px"></i>
+          <span>0</span>
+          <i class="fa fa-angle-down" style="font-size: 25px"></i>
+        </div>
+        <div class="content">
+          <div class="style-spaces">
+            <span>Posted by</span>
+            <a href="/u/:username" class="post-owner">u/userName</a>
+          </div>
+          <h3 class="style-spaces">title title title title</h3>
+          <p class="style-spaces">
+            content content content content content content content content content content content
+            content content
+          </p>
+        </div>
+      </div> -->
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/render.js"></script>
+    <script src="./js/homePage.js"></script>
   </body>
 </html>

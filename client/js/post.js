@@ -3,12 +3,28 @@ const submitButton = document.querySelector('#submitButton');
 const titleInput = document.querySelector('.title');
 const contentInput = document.querySelector('.content');
 const feedback = document.querySelector('.feedback');
+console.log('object');
+// const userName = document.querySelector('#username');
 
-console.log(2222, contentInput.value);
+// if (document.cookie) {
+//   fetch('/api/v1/userInformation', {
+//     method: 'get',
+//     headers: { 'Content-Type': 'application/json' },
+//   }).then((response) => response.json())
+//     .then((data) => {
+//       console.log(11111);
+//       console.log(data);
+//       userName.textContent = data[0].username;
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault();
   if (titleInput.value === '' || contentInput.value === '') {
-    console.log('error');
+    feedback.textContent = 'all inputs are required';
   } else {
     fetch('/api/v1/addPost', {
       method: 'post',
@@ -24,7 +40,4 @@ submitButton.addEventListener('click', () => {
         console.log(error);
       });
   }
-
-  titleInput.textContent = '';
-  contentInput.textContent = '';
 });
