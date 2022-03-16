@@ -1,7 +1,7 @@
 const apiRoutes = require('express').Router();
 
 const {
-  addUser, logInUser, addPost, getAllPostsData, getUserInformation, logOut,
+  addUser, logInUser, addPost, getAllPostsData, getUserInformation, logOut, deletePost,
 } = require('../controllers');
 
 const { checkAuthentication } = require('../utils');
@@ -14,5 +14,6 @@ apiRoutes.use(checkAuthentication);
 apiRoutes.post('/addPost', addPost);
 apiRoutes.get('/userInformation', getUserInformation);
 apiRoutes.get('/logOut', logOut);
+apiRoutes.delete('/deletePost/:id', deletePost);
 
 module.exports = apiRoutes;

@@ -5,7 +5,8 @@ const { checkUserNameQuery } = require('./checkUserNameQuery');
 const { addPostQuery } = require('./addPost');
 const { getAllPostsQuery } = require('./getAllPostsQuery');
 const { getUserInfoQuery } = require('./getUserInfoQuery');
+const { deletePostQuery } = require('./deletePostQuery');
 
 module.exports = {
-  addUserQuery, checkEmailQuery, checkUserNameQuery, addPostQuery, getAllPostsQuery, getUserInfoQuery,
+  addUserQuery, checkEmailQuery, checkUserNameQuery, addPostQuery, getAllPostsQuery, getUserInfoQuery, deletePostQuery,
 };
