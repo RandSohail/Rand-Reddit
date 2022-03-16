@@ -2,7 +2,7 @@
 // const  = require('./api');
 const { signUp, logIn, postPage } = require('./view');
 const {
-  addUser, logInUser, addPost, getAllPostsData, getUserInformation,
+  addUser, logInUser, addPost, getAllPostsData, getUserInformation, logOut,
 } = require('./api');
 const { serverError, pageNotFound } = require('./error');
 
@@ -17,4 +17,5 @@ module.exports = {
   addPost,
   getAllPostsData,
   getUserInformation,
+  logOut,
 };

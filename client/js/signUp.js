@@ -28,8 +28,6 @@ submitButton.addEventListener('click', (e) => {
         } else {
           window.location.href = '/';
         }
-      }).catch((error) => {
-        // feedback.textContent = error.message;
       });
   }
 });
