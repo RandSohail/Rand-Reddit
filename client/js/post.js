@@ -6,9 +6,10 @@ const feedback = document.querySelector('.feedback');
 
 console.log(2222, contentInput.value);
 
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener('click', (e) => {
+  e.preventDefault();
   if (titleInput.value === '' || contentInput.value === '') {
-    console.log('error');
+    feedback.textContent = 'all inputs are required';
   } else {
     fetch('/api/v1/addPost', {
       method: 'post',
@@ -24,7 +25,4 @@ submitButton.addEventListener('click', () => {
         console.log(error);
       });
   }
-
-  titleInput.textContent = '';
-  contentInput.textContent = '';
 });

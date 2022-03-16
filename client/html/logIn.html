@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/signUp.logIn.css">
-  <title>Log In</title>
-</head>
-<body>
-  <div class="header">
-    <div class="left-header">
-      <a href="/" class="website-name">R-Reddit</a>
-      <select class="options">
-        <option value="home">Home</option>
-        <option value="1">/r/option1</option>
-        <option value="2">/r/option2</option>
-        <option value="3">/r/option3 lllllllllllllll</option>
-      </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/signUp.logIn.css" />
+    <title>Log In</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-header">
+        <a href="/" class="website-name">R-Reddit</a>
+        <select class="options">
+          <option value="home">Home</option>
+          <option value="1">/r/option1</option>
+          <option value="2">/r/option2</option>
+          <option value="3">/r/option3 lllllllllllllll</option>
+        </select>
+      </div>
+      <div class="right-header">
+        <a href="/logIn" class="options btn">Log In</a>
+        <a href="/signUp" class="options btn"> Sign Up </a>
+      </div>
     </div>
-    <div class="right-header">
-      <a href="/logIn" class="options btn">Log In</a>
-      <a href="/signUp" class="options btn"> Sign Up </a>
+    <div class="form-container">
+      <form class="sign-up-form">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="User Name"
+          class="user-input"
+          required
+        />
+        <br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="user-input"
+          required
+        />
+        <br />
+        <button type="submit" id="submitButton" class="user-input">Log In</button>
+      </form>
+      <p>Don't have an account? <a href="/signUp" class="details"> Sign Up </a></p>
+      <div class="feedback"></div>
     </div>
-  </div>
-  <div class="form-container">
-    <form class="sign-up-form">
-      <input type="text" name="username" id="username" placeholder="User Name" class="user-input"/>
-      <br />
-      <input type="password" name="password" id="password" placeholder="Password" class="user-input"/>
-      <br>
-      <button type="submit" id="submitButton" class="user-input">Log In</button>
-  </form>
-</div>
-  <script src="../js/logIn.js"></script>
-</body>
+    <script src="../js/logIn.js"></script>
+  </body>
 </html>
