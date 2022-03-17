@@ -12,6 +12,8 @@ submitButton.addEventListener('click', (e) => {
   e.preventDefault();
   if (userNameInput.value === '' || emailInput.value === '' || passwordInput.value === '' || confirmPasswordInput.value === '') {
     console.log('error');
+  } else if (passwordInput.value !== confirmPasswordInput.value) {
+    feedback.textContent = 'passwords does not matches ';
   } else {
     fetch('/api/v1/addUser', {
       method: 'post',

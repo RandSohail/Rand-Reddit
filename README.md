@@ -17,21 +17,26 @@
 ---
 ## Tech Used
 
-> npm 
-> HTML5
-> CSS3
-> Java Script (JS)
-> NodeJS
-> ExpressJS
-> Heroku
-> Postgres SQL
+- npm 
+- HTML5
+- CSS3
+- Java Script (JS)
+- NodeJS
+- ExpressJS
+- Heroku
+- Postgres SQL
 ---
 
 
 ## Schema 
-#### Version users/posts
+#### Version1 users/posts
 
 ![](https://i.imgur.com/UbVt4hq.png)
+
+#### Version2 users/posts/post_votes
+![](https://i.imgur.com/o1M50Mw.png)
+
+
 
 > :link: Link to the website where I draw my schema ➜ [DRAWSQL ](https://drawsql.app/rand-sohail/diagrams/redditclone) 
 
