@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'dev') {
 } else if (process.env.NODE_ENV === 'test') {
   URL = process.env.DB_URL_TEST;
 } else if (process.env.NODE_ENV === 'deployment') {
-  URL = process.env.DATABASE;
+  URL = process.env.DATABASE_URL;
 } else throw new Error('No Database Found !!!');
 
 const connection = new Pool({
