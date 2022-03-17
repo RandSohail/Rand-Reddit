@@ -5,7 +5,7 @@ const createPost = document.querySelector('.createPost');
 const dropdown = document.querySelector('.dropdown');
 const userName = document.querySelector('#username');
 const logout = document.querySelector('.logout');
-
+console.log(1111);
 if (document.cookie) {
   logInButton.className = 'hide-element';
   signUpButton.className = 'hide-element';

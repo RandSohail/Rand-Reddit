@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-const renderPostData = (name, title, post, postId, userId) => {
+const renderPostData = (name, title, post, postId, userId, userNameQ) => {
   const container = document.querySelector('.container');
 
   const card = document.createElement('div');
@@ -42,7 +42,11 @@ const renderPostData = (name, title, post, postId, userId) => {
   const username = document.createElement('a');
   username.textContent = name;
   username.className = 'post-owner';
-  username.href = '/u/:username';
+  fetch(`/u/${userNameQ}`, {
+    method: 'get',
+  }).then(() => {
+    username.href = `/u/${userNameQ}`;
+  });
   userInformation.appendChild(username);
 
   const deletePost = document.createElement('div');
