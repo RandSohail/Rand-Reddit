@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/reddit.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="icon" href="./assets/reddit.png" />
     <link rel="stylesheet" href="../css/signUp.logIn.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
     <title>profile</title>
   </head>
   <body>
@@ -26,12 +32,26 @@
         <div class="dropdown hide-element">
           <button class="options btn" id="username"></button>
           <div class="dropdown-content">
-            <a href="/profile">profile</a>
+            <a class="profile">profile</a>
             <a href="/" class="logout">log Out</a>
           </div>
         </div>
       </div>
     </div>
+    <div class="container">
+       <div class="left">
+      </div> 
+      <div class="right">
+        <div class="user-data">
+          <div class="name">
+            <h2 class="userNameFromHtmlFile"></h2>
+          </div>
+          <img src="" class="image" alt="profile picture" />
+        </div>
+      </div>
+    </div>
+    <script src="../js/render.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/profile.js"></script>
   </body>
 </html>

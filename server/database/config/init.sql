@@ -7,7 +7,7 @@ CREATE TABLE users (
   username VARCHAR (100) NOT NULL UNIQUE,
   email VARCHAR (255) NOT NULL UNIQUE,
   password VARCHAR NOT NULL,
-  profile_image VARCHAR(255) DEFAULT 'https://www.redditstatic.com/avatars/avatar_default_02_008985.png'
+  profile_image VARCHAR(255) DEFAULT 'https://i.redd.it/snoovatar/avatars/7b3b60e7-1ddf-43fa-83cf-dc5fb887e3c4.png'
 );
 
 CREATE TABLE posts(

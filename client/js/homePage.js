@@ -7,8 +7,7 @@ fetch('/api/v1/getAllPosts', {
   headers: { 'Content-Type': 'application/json' },
 }).then((response) => response.json())
   .then((data) => {
-    console.log(data);
     data.forEach((element) => {
-      renderPostData(element.username, element.title, element.content, element.id, element.user_id, element.username);
+      renderPostData(element.username, element.title, element.content, element.id, element.user_id);
     });
   });

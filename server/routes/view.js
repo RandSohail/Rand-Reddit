@@ -5,7 +5,7 @@ const {
 } = require('../controllers');
 const { checkAuthentication } = require('../utils');
 
-apiRoutes.get('/u/:username', profilePage);
+apiRoutes.get('/user/:username', profilePage);
 apiRoutes.use(checkAuthentication);
 apiRoutes.get('/signUp', signUp);
 apiRoutes.get('/logIn', logIn);
