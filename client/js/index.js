@@ -5,7 +5,8 @@ const createPost = document.querySelector('.createPost');
 const dropdown = document.querySelector('.dropdown');
 const userName = document.querySelector('#username');
 const logout = document.querySelector('.logout');
-console.log(1111);
+const profile = document.querySelector('.profile');
+
 if (document.cookie) {
   logInButton.className = 'hide-element';
   signUpButton.className = 'hide-element';
@@ -17,8 +18,11 @@ if (document.cookie) {
     headers: { 'Content-Type': 'application/json' },
   }).then((response) => response.json())
     .then((data) => {
-      userName.textContent = data[0].username;
+      const name = data[0].username;
+      userName.textContent = name;
+      profile.href = `/user/${name}`;
     });
+
   logout.addEventListener('click', () => {
     fetch('/api/v1/logOut')
       .then((response) => response.json());

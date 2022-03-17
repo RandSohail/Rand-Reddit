@@ -3,9 +3,18 @@
 const {
   signUp, logIn, postPage, profilePage,
 } = require('./view');
+
 const {
-  addUser, logInUser, addPost, getAllPostsData, getUserInformation, logOut, deletePost,
+  addUser,
+  logInUser,
+  addPost,
+  getAllPostsData,
+  getUserInformation,
+  logOut,
+  deletePost,
+  userProfileData,
 } = require('./api');
+
 const { serverError, pageNotFound } = require('./error');
 
 module.exports = {
@@ -22,4 +31,5 @@ module.exports = {
   logOut,
   deletePost,
   profilePage,
+  userProfileData,
 };
